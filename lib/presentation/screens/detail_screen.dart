@@ -12,19 +12,24 @@ class DetailScreen extends StatelessWidget {
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              Center(
-                child: CircleAvatar(
-                  maxRadius: 60,
-                  backgroundImage: NetworkImage(e.avatar),
+          child: InkWell(
+            onTap: () {
+              Navigator.of(context).pushNamed('/second');
+            },
+            child: Column(
+              children: [
+                Center(
+                  child: CircleAvatar(
+                    maxRadius: 60,
+                    backgroundImage: NetworkImage(e.avatar),
+                  ),
                 ),
-              ),
-              Text(
-                e.firstName + " " + e.lastName,
-              ),
-              Text(e.email),
-            ],
+                Text(
+                  e.firstName + " " + e.lastName,
+                ),
+                Text(e.email),
+              ],
+            ),
           ),
         ),
       ),

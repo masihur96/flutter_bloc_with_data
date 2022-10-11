@@ -10,8 +10,11 @@ import '../widgets/user_list_tile.dart';
 import 'detail_screen.dart';
 
 class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+  const Home({Key? key, required this.title, required this.bgColor})
+      : super(key: key);
 
+  final String title;
+  final Color bgColor;
   @override
   Widget build(BuildContext context) {
     return BlocProvider(

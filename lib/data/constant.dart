@@ -1,3 +1,4 @@
 class API {
-  static String endPoint = 'https://reqres.in/api/users?page=2';
+  static String apiHeader = 'https://reqres.in/api/';
+  static String endPoint = '${apiHeader}users?page=2';
 }
