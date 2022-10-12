@@ -13,7 +13,6 @@ class AppRouter {
             bgColor: Colors.greenAccent,
           ),
         );
-
       case '/second':
         return MaterialPageRoute(
           builder: (_) => const SecondScreen(
