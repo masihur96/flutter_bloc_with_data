@@ -24,6 +24,26 @@ class Home extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('The Bloc App'),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/second');
+              },
+              child: const Text(
+                "2",
+                style: TextStyle(color: Colors.white, fontSize: 30),
+              ),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/third');
+              },
+              child: const Text(
+                "3",
+                style: TextStyle(color: Colors.white, fontSize: 30),
+              ),
+            ),
+          ],
         ),
         body: BlocBuilder<UserBloc, UserState>(
           builder: (context, state) {
