@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../business_logic/blocs/app_blocs.dart';
-import '../../business_logic/blocs/app_events.dart';
-import '../../business_logic/blocs/app_states.dart';
+import '../../business_logic/user_blocs/app_blocs.dart';
+import '../../business_logic/user_blocs/app_events.dart';
+import '../../business_logic/user_blocs/app_states.dart';
 import '../../data/models/user_model.dart';
 import '../../data/repositories/user_repository.dart';
 import '../widgets/user_list_tile.dart';
 import 'detail_screen.dart';
 
-class Home extends StatelessWidget {
-  const Home({Key? key, required this.title, required this.bgColor})
+class HomPage extends StatelessWidget {
+  const HomPage({Key? key, required this.title, required this.bgColor})
       : super(key: key);
 
   final String title;
@@ -27,7 +27,7 @@ class Home extends StatelessWidget {
           actions: [
             TextButton(
               onPressed: () {
-                Navigator.of(context).pushNamed('/second');
+                Navigator.of(context).pushNamed('/login');
               },
               child: const Text(
                 "2",

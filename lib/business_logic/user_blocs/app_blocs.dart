@@ -1,6 +1,7 @@
-import 'package:bloc_flutter/business_logic/blocs/app_events.dart';
-import 'package:bloc_flutter/business_logic/blocs/app_states.dart';
+import 'package:bloc_flutter/business_logic/user_blocs/app_events.dart';
+import 'package:bloc_flutter/business_logic/user_blocs/app_states.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../data/repositories/user_repository.dart';
 
 class UserBloc extends Bloc<UserEvent, UserState> {
